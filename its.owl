@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/nikhil/ontologies/2024/11/its"
+         xmlns="http://www.semanticweb.org/nikhil/ontologies/2024/11/its#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/nikhil/ontologies/2024/11/its"/>
+
+<owl:ObjectProperty rdf:about="#hasResource">
+  <rdfs:domain rdf:resource="#Student"/>
+  <rdfs:range rdf:resource="#Resource"/>
+  <rdfs:range rdf:resource="#Triangle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#takesTest">
+  <rdfs:domain rdf:resource="#Student"/>
+  <rdfs:range rdf:resource="#Test"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#answer">
+  <rdfs:domain rdf:resource="#Test"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#feedback">
+  <rdfs:domain rdf:resource="#Student"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#firstName">
+  <rdfs:domain rdf:resource="#Student"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#lastName">
+  <rdfs:domain rdf:resource="#Student"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#mark">
+  <rdfs:domain rdf:resource="#Test"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#question">
+  <rdfs:domain rdf:resource="#Test"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#score">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Student"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#triangleFormula">
+  <rdfs:domain rdf:resource="#Triangle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Student"/>
+
+<owl:Class rdf:about="#Resource"/>
+
+<owl:Class rdf:about="#Triangle">
+  <rdfs:subClassOf rdf:resource="#Resource"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Test"/>
+
+<owl:NamedIndividual rdf:about="#Q1">
+  <rdf:type rdf:resource="#Test"/>
+  <answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">96</answer>
+  <mark rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</mark>
+  <question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the area of triangle whose base is 12 height is 16?</question>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#S1">
+  <rdf:type rdf:resource="#Student"/>
+  <feedback rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Great!</feedback>
+  <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikhil</firstName>
+  <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mahato</lastName>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</score>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#formula">
+  <rdf:type rdf:resource="#Triangle"/>
+  <triangleFormula rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1/2 * Base * Height</triangleFormula>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Q2">
+  <rdf:type rdf:resource="#Test"/>
+  <answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</answer>
+  <mark rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</mark>
+  <question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Find the hypotenuse of a right triangle with sides 6 and 8.</question>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Q7">
+  <rdf:type rdf:resource="#Test"/>
+  <answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15.59</answer>
+  <mark rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</mark>
+  <question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the area of an equilateral triangle with side 6?</question>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Q8">
+  <rdf:type rdf:resource="#Test"/>
+  <answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</answer>
+  <mark rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</mark>
+  <question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Find the base of a triangle with height 8 and area 40.</question>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Q9">
+  <rdf:type rdf:resource="#Test"/>
+  <answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</answer>
+  <mark rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</mark>
+  <question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Find the third side of a right triangle with sides 9 and 12.</question>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Q3">
+  <rdf:type rdf:resource="#Test"/>
+  <answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</answer>
+  <mark rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</mark>
+  <question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the perimeter of a triangle with sides 3, 4, and 5?</question>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Q4">
+  <rdf:type rdf:resource="#Test"/>
+  <answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75</answer>
+  <mark rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</mark>
+  <question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the area of a triangle with base 15 and height 10?</question>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Q5">
+  <rdf:type rdf:resource="#Test"/>
+  <answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">70</answer>
+  <mark rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</mark>
+  <question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Find the missing angle of a triangle with angles 50° and 60°.</question>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Q6">
+  <rdf:type rdf:resource="#Test"/>
+  <answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</answer>
+  <mark rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</mark>
+  <question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculate the height of a triangle with area 30 and base 12.</question>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Q10">
+  <rdf:type rdf:resource="#Test"/>
+  <answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50</answer>
+  <mark rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</mark>
+  <question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Find the area of a triangle with base 20 and height 5.</question>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nikhil">
+  <rdf:type rdf:resource="#Student"/>
+  <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikhil</firstName>
+  <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mahato</lastName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Niiikil">
+  <rdf:type rdf:resource="#Student"/>
+  <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niiikil</firstName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sorry">
+  <rdf:type rdf:resource="#Student"/>
+  <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sorry</firstName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Don">
+  <rdf:type rdf:resource="#Student"/>
+  <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Don</firstName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ram">
+  <rdf:type rdf:resource="#Student"/>
+  <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ram</firstName>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
